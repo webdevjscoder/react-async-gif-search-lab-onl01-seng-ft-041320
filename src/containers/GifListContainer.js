@@ -11,7 +11,8 @@ export default GifListContainer extends Component {
   render() {
     return (
       <div>
-        <
+        <GifSearch fetchGifs={this.fetchGifs} />
+        <GifList gifs={this.state.gifs} />
       </div>
     )
   }
