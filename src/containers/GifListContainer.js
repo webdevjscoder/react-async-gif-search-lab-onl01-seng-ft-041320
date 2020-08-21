@@ -22,7 +22,7 @@ export default class GifListContainer extends Component {
 
     fetch(url)
     .then(res => res.json())
-    .then(json => {
+    .then(({data}) => {
       this.setState({gifs: data.map(gif => ({ url: gif.images.original.url }))})
     })
   }
